@@ -1,4 +1,4 @@
-data=[{
+const data=[{
     version: "4.1.3" ,
     releaseDate:"august 2, 2010",
     bugs:["Fixes issue"],
@@ -40,45 +40,45 @@ version:"7.1.2",
 }
 ]
 
-function findByUsingReleaseYear(year){
+function findByUsingReleaseYear(year:any){
     console.log("---------------------------------------------------------------------------")
-    filteredYear=data.filter(n=>n.releaseDate.includes(year))
+    let filteredYear=data.filter(n=>n.releaseDate.includes(year))
     console.log(`${filteredYear.length} versions were released in Year ${year}`)
     console.table(filteredYear)
     console.log("---------------------------------------------------------------------------")
 }
-function findByUsingBug(str){
+function findByUsingBug(str:any){
     console.log("---------------------------------------------------------------------------")
-    bug=data.filter(n=>n.bugs.includes(str))
+    let bug=data.filter(n=>n.bugs.includes(str))
     console.log(`${bug.length} version have ${str} Bug...`)
     console.table(bug)
     console.log(bug.length,"Bugs")
     console.log("---------------------------------------------------------------------------")
 }
-function findByUsingType(type){
+function findByUsingType(type:any){
     console.log("---------------------------------------------------------------------------")
-    findType=data.filter(n=>n.versionType.includes(type))
+    let findType=data.filter(n=>n.versionType.includes(type))
     console.log(`${findType.length} versions have ${type} type...`)
     console.table(findType)
     console.log("---------------------------------------------------------------------------")
 }
-function findByUsingFeature(str){
+function findByUsingFeature(str:any){
     console.log("---------------------------------------------------------------------------")
-    feature=data.filter(n=>n.features.includes(str))
+    let feature=data.filter(n=>n.features.includes(str))
     console.log(`${feature.length} versions have ${str} Feature...`)
     console.table(feature)
     console.log("---------------------------------------------------------------------------")
 }
-function findByUsingAuthor(name){
+function findByUsingAuthor(name:any){
     console.log("---------------------------------------------------------------------------")
-    authorName=data.filter(n=>n.author.includes(name))
+    let authorName=data.filter(n=>n.author.includes(name))
     console.log(`${authorName.length} version developed by ${name}...`)
     console.table(authorName)
     console.log("---------------------------------------------------------------------------")
 }
-function findByUsingVersion(ver){
+function findByUsingVersion(ver:any){
     console.log("---------------------------------------------------------------------------")
-    version=data.filter(n=>n.version==ver)
+    let version=data.filter(n=>n.version==ver)
     console.table(version)
     console.log("---------------------------------------------------------------------------")
 }
