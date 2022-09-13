@@ -67,7 +67,7 @@ const bugList = [{
 }
 ]
 // find Information by Year
-function findByReleaseYear(year: any) {
+function findByReleaseYear(year:string) {
     console.log("---------------------------------------------------------------------------")
     let filteredYear = data.filter(n => n.releaseDate.toString().includes(year))
     console.log(`${filteredYear.length} versions were released in Year ${year}`)
@@ -141,7 +141,7 @@ function findHighestUpdatedByAuthor() {
 // Question 1
 // How many releases were made in year
 console.log("Question 1")
-findByReleaseYear(2010)
+findByReleaseYear("2010")
 
 // Question 2
 // In which release specific bugid is present
